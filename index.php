@@ -28,8 +28,8 @@
 					$headers .= "X-Mailer: PHP5\n";
 					$headers .= 'MIME-Version: 1.0' . "\n";
 					$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-
-					if(mail($dest,$asunto,$cuerpo,$headers)){//esta es una comparación para ver si envio el mail o no 
+					mail($dest, $nombre, $email, $cuerpo, $headers) ;
+					if(mail($dest, $nombre, $email, $cuerpo, $headers)){//esta es una comparación para ver si envio el mail o no 
 						$result = '<div class="result_ok">Email enviado correctamente</div>';
 						// si el envio fue exitoso reseteamos lo que el usuario escribio:
 						$_POST['nombre'] = "";

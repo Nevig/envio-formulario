@@ -1,0 +1,153 @@
+*{ margin: 0; padding: 0;}
+body{
+	font: 100% normal Arial, Helvetica, sans-serif;
+	background: #ffffff;
+} 
+
+input, select, textarea {
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+}
+
+#contactform{
+	margin: 30px auto;
+	width: 500px;
+	padding: 20px;
+	background: #222222;
+	top: 50px;
+
+	/*Estilo del borde*/
+	border: 1px solid #262626;
+	-moz-border-radius : 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+
+	/*sombra del borde*/
+	-moz-box-shadow: 2px 2px 2px 2px #cccccc;
+	-webkit-box-shadow: 2px 2px 2px 2px #cccccc;
+	box-shadow: 2px 2px 2px 2px #cccccc;
+}
+
+#contactform h1{
+	color: #ffffff;
+	font-size: 18px;
+	text-transform: uppercase;
+	padding: 5px 0 5px 5px;
+	border-bottom: 1px solid #161712;
+	border-top: 1px solid #161712;
+}
+
+#contactform label{
+	width: 100%;
+	display: block;
+	background: #1C1C1C;
+	border-top: 1px solid #262626;
+	border-bottom: 1px solid #161712;
+	padding: 10px 0 10px 0;
+}
+
+#contactform label span {
+	display: block;
+	color: #bbbbbb;
+	font-size: 12px;
+	float: left;
+	width: 100px;
+	text-align: right;
+	padding: 5px 20px 0 0;
+}
+
+#contactform .nombre, .email, .empresa{
+	padding: 10px 10px;
+	width: 300px;
+	background: #262626;
+	border-bottom: 1px double #171717;
+	border-top: 1px double #171717;
+	border-left: 1px double #333333;
+	border-right: 1px double #333333;
+}
+
+#contactform .message {
+	padding: 7px 7px;
+	width: 307px;
+	background: #262626;
+	border-bottom: 1px double #171717;
+	border-top: 1px double #171717;
+	border-left: 1px double #333333;
+	border-right: 1px double #333333;
+	overflow: hidden;
+	height: 150px;
+}
+
+#contactform .boton {
+	margin: 0 0 10px 0;
+	padding: 4px 7px;
+	background: #CC0000;
+	border: 0px;
+	position: relative;
+	top: 10px;
+	left: 382px;
+	width: 100px;
+	border-bottom: 1px double #660000;
+	border-top: 1px double #660000;
+	border-left: 1px double #FF0033
+	border-right: 1px double #FF0033; 
+}
+
+.hint {
+	display: none;
+	font-family: Arial, Verdana;
+	font-size: 12px;
+}
+
+.field:hover .hint {
+	position: absolute;
+	display: block;
+	margin: -30px 0 0 460px;
+	color: #FFFFFF;
+	padding: 7px 10px;
+	background: rgba(0, 0, 0, 0.6);
+
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+}
+
+.result_fail{
+	background: none repeat scroll 0 0 #BC1010;
+	border-radius: 20px 20px 20px 20px;
+	color: white;
+	font-weight: bold;
+	padding: 10px 20px;
+	text-align: center;
+}
+
+.result_ok{
+	background: none repeat scroll 0 0 #BC1010;
+	border-radius: 20px 20px 20px 20px;
+	color: white;
+	font-weight: bold;
+	padding: 10px 20px;
+	text-align: center;
+}
+
+.error{
+	background-color: #BC1010;
+	padding: 6px 12px;
+	border-radius: 4px;
+	color: white;
+	font-weight: bold;
+	margin: -30px 0 0 460px;
+	position: absolute;
+}
+
+.error:before{
+	content: '';
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	border-right: 8px solid #BC1010;
+	border-left: 8px solid transparent;
+	left: -16px;
+	position: absolute;
+	top: 5px;
+}

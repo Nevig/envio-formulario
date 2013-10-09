@@ -9,56 +9,56 @@
 	<body>
 
 		<?php
-			require 'PHPMailer/class.phpmailer.php';
-			if(isset($_POST['boton'])){
+			/*require 'PHPMailer/class.phpmailer.php';
+			if(isset($_POST['boton'])){*/
 
 
 				//Create a new PHPMailer instance
-				$mail = new PHPMailer();
+				// $mail = new PHPMailer();
 				//Tell PHPMailer to use SMTP
-				$mail->IsSMTP();
+				// $mail->IsSMTP();
 				//Enable SMTP debugging
 				// 0 = off (for production use)
 				// 1 = client messages
 				// 2 = client and server messages
-				$mail->SMTPDebug  = 2;
+				// $mail->SMTPDebug  = 2;
 				//Ask for HTML-friendly debug output
-				$mail->Debugoutput = 'html';
+				// $mail->Debugoutput = 'html';
 				//Set the hostname of the mail server
-				$mail->Host       = 'smtp.gmail.com';
+				// $mail->Host       = 'smtp.gmail.com';
 				//Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
-				$mail->Port       = 587;
+				// $mail->Port       = 587;
 				//Set the encryption system to use - ssl (deprecated) or tls
-				$mail->SMTPSecure = 'tls';
+				// $mail->SMTPSecure = 'tls';
 				//Whether to use SMTP authentication
-				$mail->SMTPAuth   = true;
+				// $mail->SMTPAuth   = true;
 				//Username to use for SMTP authentication - use full email address for gmail
-				$mail->Username   = "jenyrosas60@gmail.com";
+				// $mail->Username   = "jenyrosas60@gmail.com";
 				//Password to use for SMTP authentication
-				$mail->Password   = "Z3sWomYAJu9MGY";
+				// $mail->Password   = "Z3sWomYAJu9MGY";
 				//Set who the message is to be sent from
-				$mail->SetFrom('nevi74@gmail.com', 'First Last');
+				// $mail->SetFrom('nevi74@gmail.com', 'First Last');
 				//Set an alternative reply-to address
-				$mail->AddReplyTo('nevi74@gmail.com','First Last');
+				// $mail->AddReplyTo('nevi74@gmail.com','First Last');
 				//Set who the message is to be sent to
-				$mail->AddAddress('nevi74@gmail.com', 'John Doe');
+				// $mail->AddAddress('nevi74@gmail.com', 'John Doe');
 				//Set the subject line
-				$mail->Subject = 'PHPMailer GMail SMTP test';
+				// $mail->Subject = 'PHPMailer GMail SMTP test';
 				//Read an HTML message body from an external file, convert referenced images to embedded, convert HTML into a basic plain-text alternative body
-				$mail->MsgHTML(file_get_contents('contents.html'), dirname(__FILE__));
-				$mail->Body = "<p>Mensaje</p> <br />de muestra";
+				// $mail->MsgHTML(file_get_contents('contents.html'), dirname(__FILE__));
+				// $mail->Body = "<p>Mensaje</p> <br />de muestra";
 				//Replace the plain text body with one created manually
-				$mail->AltBody = 'This is a plain-text message body';
+				// $mail->AltBody = 'This is a plain-text message body';
 				//Attach an image file
 				
 
 				//Send the message, check for errors
-				if(!$mail->Send()) {
+				/*if(!$mail->Send()) {
 				  echo "Mailer Error: " . $mail->ErrorInfo;
 				} else {
 				  echo "Message sent!";
 				}
-
+*/
 				/*$errors = array(); // declaramos array para almacenar los errores
 				if($_POST['nombre'] == ''){
 					$errors[1] = '<span class="error">Ingrese su nombre</span>';
@@ -67,10 +67,10 @@
 				}else if($_POST['message'] == ''){
 					$errors[3]= '<span class="error">Ingrese un mensaje</span>';
 				}else{*/
-					$dest = "nevi74@gmail.com";//Email de destino
-					$nombre = $_POST['nombre'];
-					$email = $_POST['email'];
-					$cuerpo = $_POST['message'];//Cuerpo del mensaje
+					// $dest = "nevi74@gmail.com";//Email de destino
+					// $nombre = $_POST['nombre'];
+					// $email = $_POST['email'];
+					// $cuerpo = $_POST['message'];//Cuerpo del mensaje
 
 					//Cabeceras del correo para que no llegue a spam
 					// $headers = "De: $nombre $email\r\n"; //Quien envia?
@@ -87,9 +87,9 @@
 					// }else{
 					// 	$result = '<div class="result_fail">Hubo un error al enviar el mensaje</div>';
 					// }
-			}
+			// }
 		?>
-		<form id="contactform" method="POST" action="<?=$_SERVER['PHP_SELF'];?>">
+		<form id="contactform" method="POST" action="">
 
 			<!-- <div class="box"> -->
 
@@ -98,7 +98,7 @@
 				<div class="field">
 					<label>
 						<span> Nombre *:</span>
-						<input type="text" class="nombre" name="nombre" id="name" />
+						<input type="text" class="nombre input" name="nombre" id="name" />
 						<p class="hint"> Ingresa tu nombre.</p>
 					</label>
 				</div>
@@ -106,7 +106,7 @@
 				<div class="field">
 					<label>
 						<span> Email *:</span>
-						<input type="email" title="mail@ejemplo.com" class="email" name="email" id="email" />
+						<input type="email" title="mail@ejemplo.com" class="email input" name="email" id="email" />
 						<!--<p class="hint"> Ingresa tu email.</p>-->
 					</label>
 				</div>
@@ -114,7 +114,7 @@
 				<div class="field">
 					<label>
 						<span> Empresa:</span>
-						<input type="text" class="empresa" name="empresa" id="empresal"/>
+						<input type="text" class="empresa input" name="empresa" id="empresal"/>
 						<!--<p class="hint"> Ingresa tu empresa.</p> -->
 					</label>
 				</div>
@@ -122,14 +122,18 @@
 				<div class="field">
 					<label>
 						<span> Mensaje *:</span>
-						<textarea class="message" name="message" id="feedback" ></textarea>
+						<textarea class="message input" name="message" id="feedback" ></textarea>
 						<!--<p class="hint"> Escribe tu mensaje.</p>-->
 					</label>
 				</div>		
 				<input type="submit" class="boton" name="boton" value="Enviar"/>
 
 		</form>
-		<?php echo $result;?>
+		<?php /*echo $result;*/?>
+
+		<div id="resultado">
+			
+		</div>
 
 	</body>
 </html>

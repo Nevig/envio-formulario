@@ -1,6 +1,9 @@
 $(document).ready(function(){
+
 	var emailreg = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
-	$(".boton").click(function(){
+	$(".boton").click(function(e){
+		var resultado = '<div class="result_ok">Email enviado correctamente</div>';
+
 		$(".error").remove();
 		if($(".nombre").val() == ""){
 			$(".nombre").focus().after("<p class='error'>Ingrese su nombre</p>");
@@ -11,6 +14,11 @@ $(document).ready(function(){
 		}else if($(".message").val() == ""){
 			$(".message").focus().after("<p class='error'>Ingrese un mensaje</p>");
 			return false;
+		}else{
+			e.preventDefault(e);
+			$('.input').val('');
+			$('#resultado').html(resultado);
+
 		}
 	});
 	$(".nombre, .message").keyup(function(){
@@ -25,4 +33,6 @@ $(document).ready(function(){
 			return false;
 		}
 	});
+
+
 });

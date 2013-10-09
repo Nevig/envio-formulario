@@ -33,15 +33,15 @@
 				//Whether to use SMTP authentication
 				$mail->SMTPAuth   = true;
 				//Username to use for SMTP authentication - use full email address for gmail
-				$mail->Username   = "ejemplo@gmail.com";
+				$mail->Username   = "jenyrosas60@gmail.com";
 				//Password to use for SMTP authentication
-				$mail->Password   = "password";
+				$mail->Password   = "Z3sWomYAJu9MGY";
 				//Set who the message is to be sent from
-				$mail->SetFrom('ejemplo@gmail.com', 'First Last');
+				$mail->SetFrom('nevi74@gmail.com', 'First Last');
 				//Set an alternative reply-to address
-				$mail->AddReplyTo('replyto@example.com','First Last');
+				$mail->AddReplyTo('nevi74@gmail.com','First Last');
 				//Set who the message is to be sent to
-				$mail->AddAddress('nvi74@hotmail.com', 'John Doe');
+				$mail->AddAddress('nevi74@gmail.com', 'John Doe');
 				//Set the subject line
 				$mail->Subject = 'PHPMailer GMail SMTP test';
 				//Read an HTML message body from an external file, convert referenced images to embedded, convert HTML into a basic plain-text alternative body
